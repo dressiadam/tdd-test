@@ -16,8 +16,12 @@ suite('Requests test', function() {
 	test('Returns an array', function() {
 		assert.deepEqual(this.exercise.returnAnArray(), ['a','b','c'], 'It is an array');
 	});
+
 	test('Returns current value string', function() {
-		assert.deepEqual(this.exercise.addNewInputString('alpha'), ['alpha'], 'Returns a string');
+		assert.deepEqual(this.exercise.addNewInputString('alpha'), ['alpha'], 'Returns an array');
 	});
 
+	test('Coma test', function() {
+		assert.deepEqual(this.exercise.addNewInputString('alpha,beta,gamma'), ['alpha', 'beta', 'gamma'], 'Returns an array, coma separators');
+	});
 });

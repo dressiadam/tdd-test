@@ -2,3 +2,4 @@ Todo list:
 - one-line string input
 - commas handler
 - isString
+- spacet lekezelni a vesszok utan

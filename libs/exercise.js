@@ -1,7 +1,8 @@
 /**
  * Created by adam.drescher on 2015-03-12.
  */
-var Exercise = function() {
+var _ = require('underscore'),
+	Exercise = function() {
 	this._inputsStorage = [];
 };
 
@@ -13,11 +14,13 @@ Exercise.prototype.returnAnArray = function() {
 };
 
 /**
- * Returns with an array
+ * Checks strings and returns with an array
  */
 Exercise.prototype.addNewInputString = function(inputValue) {
-	this._inputsStorage.push(inputValue);
+	if(_.isString(inputValue) ) {
+		this._inputsStorage = inputValue.split(',');
+	}
 	return this._inputsStorage;
 };
 
-module.exports = Exercise
+module.exports = Exercise;
