@@ -22,4 +22,8 @@ suite('Requests test', function() {
 		assert.deepEqual(this.exercise.addNewInputString('10,20,30'), ['10', '20', '30'], 'Returns an array, coma separators');
 		assert.deepEqual(this.exercise.addNewInputString('a,b,a@b.hu'), ['a', 'b', 'a@b.hu'], 'Returns an array, coma separators');
 	});
+
+	test('Multi line string input test', function() {
+		assert.deepEqual(this.exercise.addNewInputMultiLine('alpha,beta\ngamma'), [['1', '2', '3'], ['alpha', 'beta', 'gamma']], 'Returns an 2 dimensional array');
+	});
 });
