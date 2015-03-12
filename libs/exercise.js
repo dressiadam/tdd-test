@@ -7,13 +7,6 @@ var _ = require('underscore'),
 };
 
 /**
- * Returns with an array
- */
-Exercise.prototype.returnAnArray = function() {
-	return ['a', 'b', 'c'];
-};
-
-/**
  * Checks strings and returns with an array
  */
 Exercise.prototype.addNewInputString = function(inputValue) {

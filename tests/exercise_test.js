@@ -13,15 +13,13 @@ suite('Requests test', function() {
 
 	});
 
-	test('Returns an array', function() {
-		assert.deepEqual(this.exercise.returnAnArray(), ['a','b','c'], 'It is an array');
-	});
-
 	test('Returns current value string', function() {
 		assert.deepEqual(this.exercise.addNewInputString('alpha'), ['alpha'], 'Returns an array');
 	});
 
 	test('Coma test', function() {
 		assert.deepEqual(this.exercise.addNewInputString('alpha,beta,gamma'), ['alpha', 'beta', 'gamma'], 'Returns an array, coma separators');
+		assert.deepEqual(this.exercise.addNewInputString('10,20,30'), ['10', '20', '30'], 'Returns an array, coma separators');
+		assert.deepEqual(this.exercise.addNewInputString('a,b,a@b.hu'), ['a', 'b', 'a@b.hu'], 'Returns an array, coma separators');
 	});
 });
