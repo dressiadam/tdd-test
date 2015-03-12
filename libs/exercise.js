@@ -1,13 +1,23 @@
 /**
  * Created by adam.drescher on 2015-03-12.
  */
-var Exercise = function() {};
+var Exercise = function() {
+	this._inputsStorage = [];
+};
 
 /**
- * Returns with number 1
+ * Returns with an array
  */
 Exercise.prototype.returnAnArray = function() {
 	return ['a', 'b', 'c'];
 };
 
-module.exports = Exercise;
+/**
+ * Returns with an array
+ */
+Exercise.prototype.addNewInputString = function(inputValue) {
+	this._inputsStorage.push(inputValue);
+	return this._inputsStorage;
+};
+
+module.exports = Exercise

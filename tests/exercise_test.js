@@ -16,4 +16,8 @@ suite('Requests test', function() {
 	test('Returns an array', function() {
 		assert.deepEqual(this.exercise.returnAnArray(), ['a','b','c'], 'It is an array');
 	});
+	test('Returns current value string', function() {
+		assert.deepEqual(this.exercise.addNewInputString('alpha'), ['alpha'], 'Returns a string');
+	});
+
 });

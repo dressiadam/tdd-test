@@ -1,0 +1,4 @@
+Todo list:
+- one-line string input
+- commas handler
+- isString
